@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - Ghayeth Al Masri</title>
+  <title>Ghayeth Al Masri - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -12,13 +12,66 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ---- Skills pills ---- */
+    .skills-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 12px;
+      /* space between pills */
+    }
 
+    /* individual pill */
+    .skill-pill {
+      background: #1f1f1f;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .profile-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50% / 35%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* subtle hover / focus effect */
+    .skill-pill:hover,
+    .skill-pill:focus {
+      transform: translateY(-2px);
+    }
+
+    /* make sure text stays centered on very small screens */
+    @media (max-width: 420px) {
+      .skill-pill {
+        font-size: 0.85rem;
+        padding: 6px 14px;
+      }
+    }
+
+    .mt-top {
+      margin-top: 5px;
+    }
+  </style>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -28,14 +81,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -43,32 +88,23 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <!-- <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div> -->
+   
 
-    <!--
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      Uncomment the line below if you also wish to use an image logo 
-       <img src="assets/img/logo.png" alt=""> 
-      <h1 class="sitename">Ghayeth Al Masri</h1>
-    </a> 
-    -->
-
-    <div class="social-links text-center">
-      <a href="https://github.com/Ghayeth2"
-       class="twitter"><i class="bi bi-github"></i></a>
-      <a href="linkedin.com/in/ghayeth-al-masri-a13704241/"
+    <div class="social-links text-center mt-4">
+      <a href="https://www.facebook.com/share/1BtB7YFy2p/" 
+      class="facebook"><i class="bi bi-facebook"></i></a>
+       <a href="https://github.com/Ghayeth2" class="twitter"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/in/ghayeth-al-masri-a13704241/"
        class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="Ghayeth Al Masri - Cv (Eng)-2.pdf"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="projects.html"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-       
-        
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#certifications"><i class="bi bi-award navicon"></i> Certifications</a></li>
       </ul>
     </nav>
 
@@ -76,39 +112,342 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/backend-code.png" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Ghayeth Al Masri</h2>
-        <p>I'm a <span class="typed" >Back-end Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
    
 
+    <section id="about" class="about section">
 
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+
+      </div>
+
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Profile Image with Oval Frame -->
+        <div class="profile-image-wrapper" style="margin-bottom: 30px;">
+          <img src="assets/img/me.jpg" alt="Profile Photo" class="profile-img">
+        </div>
+
+        <!-- Hero Text (from Hero Section) -->
+        <div>
+          <h2>Ghayeth Al Masri</h2>
+          <p>
+            I'm a <span class="typed" data-typed-items="
+            Backend Developer (Spring Boot), Backend Developer (GoLang),
+            Backend Developer (Laravel)">
+              Backend Developer
+            </span>
+            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+          </p>
+        </div>
+
+        <!-- Brief Description -->
+        <div class="mt-4">
+          <p>
+            I have over a year of practical experience, building efficient, scalable and maintainable 
+            applications. I worked on independent and team-based projects.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <section id="skills" class="section">
+          <div class="container" data-aos="fade-up">
+
+            <!-- NEW skills list -->
+            <ul class="skills-list d-flex flex-wrap justify-content-center">
+              <li class="skill-pill">HTML</li>
+              <li class="skill-pill">Java</li>
+              <li class="skill-pill">C</li>
+              <li class="skill-pill">GoLang</li>
+              <li class="skill-pill">Spring (Spring Boot, Spring Security, Spring Data, Spring MVC)</li>
+              <li class="skill-pill">Fiber Framework</li>
+              <li class="skill-pill">Laravel</li>
+              <li class="skill-pill">MySQL</li>
+              <li class="skill-pill">SQL</li>
+              <li class="skill-pill">Redis</li>
+              <li class="skill-pill">Postman</li>
+              <li class="skill-pill">GitHub</li>
+              <li class="skill-pill">RESTful API</li>
+              <li class="skill-pill">WebSocket (Real-time updates)</li>
+              <li class="skill-pill">Docker</li>
+              <li class="skill-pill">Agile</li>
+              <li class="skill-pill">Unit Testing</li>
+              <li class="skill-pill">Integration Testing</li>
+              <li class="skill-pill">SOLID</li>
+              <li class="skill-pill">OOP</li>
+              <li class="skill-pill">Design Patterns</li>
+              <li class="skill-pill">Clean Code Architecture</li>
+              <!-- add or remove <li> items as needed -->
+            </ul>
+          </div>
+        </section>
+
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Computer Engineering </h4>
+              <h5>2019 - 2024</h5>
+              <p><em>Karabuk University, Turkey</em></p>
+            </div><!-- Edn Resume Item -->
+
+            
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experience</h3>
+            <div class="resume-item">
+              <h4>Backend Developer - Internship</h4>
+              <h5>Feb 2024 - May 2024</h5>
+              <p><em>Karabük Üniversitesi Demir Çelik Enstitüsü, Turkey </em></p>
+              <ul>
+                <li>Establishing core services for Labsis system.</li>
+                <li>Testing the services and provide API documentations. </li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Backend Developer - Internship</h4>
+              <h5>Jul 2024 - Jul 2024</h5>
+              <p><em>Karabük Üniversitesi Demir Çelik Enstitüsü, Turkey</em></p>
+              <ul>
+                <li>Maintaining the deployed system.</li>
+                <li>Enhancing user experience.</li>
+              </ul>
+            </div><!-- Edn Resume Item --> 
+            
+            <div class="resume-item">
+              <h4>Desktop Application Developer- Internship</h4>
+              <h5>Aug 2022 - Aug 2022</h5>
+              <p><em>Karabük Üniversitesi Bilgi İşlem Başkanlığı, Turkey</em></p>
+              <ul>
+                <li>Building CRUD application for a school using Java Swing.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+       
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/lms.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Library Management System</h4>
+                  <p>Laravel</p>
+                  <a href="assets/img/lms.png" title="Library" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="library-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/ecommerce.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>E-commerce</h4>
+                  <p>Java (Spring)</p>
+                  <a href="assets/img/ecommerce.webp" title="E-commerce"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="sp-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/atm.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ATM Simulator</h4>
+                  <p>Java (Spring) </p>
+                  <a href="assets/img/atm.png" title="ATM"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="atm-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/labsis.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DÇE Labsis</h4>
+                  <p>GoLang (Fiber Framework)</p>
+                  <a href="assets/img/labsis.jpg" title="Labsis" data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="labsis-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/hospital.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Hospital Management System</h4>
+                  <p>Java (Spring) & Vanilla</p>
+                  <a href="assets/img/hospital.jpg" title="HMS" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="hospital-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/almurooj.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Al Murooj Private School</h4>
+                  <p>Java (Spring)</p>
+                  <a href="assets/img/almurooj.jpg" title="Al Murooj"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="almurooj-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="certifications" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certifications</h2>
+       
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+         
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="https://drive.google.com/file/d/1qClUaUHiM5qxqZ01JTYePTSYd4iL-Bbq/view?usp=drive_link" 
+                class="stretched-link">Workplace Education Program</a></h4>
+              <p class="description">Certification of appreciation from 
+                Karabük Üniversitesi Demir Çelik Enstitüsü, Turkey.
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+          
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="https://www.coursera.org/account/accomplishments/certificate/4A4DLVAKH8CZ" 
+                class="stretched-link">Programming for Everybody (Getting Started with Python)</a></h4>
+              <p class="description">coursera, issued May 2023.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+   
+
+   
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p><span></span> <strong class="px-1 sitename">Portfolio</strong>
-           <span>Ghayeth Al Masri</span></p>
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative">
+    <div class="container text-center py-4">
+      <div class="copyright">
+        <p>&copy; 2025 <strong>Ghayeth Al Masri</strong></p>
+        <p> | Contact: <a href="mailto:ghayeth@example.com">ghayeth.msri@gmail.com</a></p>
       </div>
-     
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
